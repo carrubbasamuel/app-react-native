@@ -69,7 +69,7 @@ export default function App() {
           handleSearch={handleSearch}
         />
       </View>}
-      {error && <Text style={styles.error}>{error}</Text>}
+      {error && <View><Text style={styles.error}>{error}</Text><Button title='torna' onPress={homebutton}/></View>}
       {data && (
         <View style={styles.userData}>
           <Image
