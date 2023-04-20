@@ -48,7 +48,7 @@ export default function App() {
     setError(null);
     try {
       const response = await axios.get(
-        `https://api.github.com/users/${searchTerm}`
+        `https://api.github.com/users/${searchTerm.toLocaleLowerCase().split(' ').join('')}`
       );
       setData(response.data);
     } catch (err) {
